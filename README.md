@@ -75,3 +75,7 @@ mup setup
 
 mup deploy
 ```
+
+## Templates
+
+Meteor uses Spacebars to handle templating. Spacebars is HTML with some additions. The additions allow the including partials, expressions and block helpers.
