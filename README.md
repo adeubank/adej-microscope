@@ -102,3 +102,9 @@ The `Autopublish` takes care of publishing and subscribing by automatically incl
 
 ## Routing
 
+Meteor uses a package called iron routing to handle routing within the application. Iron routing matches URL paths to template names. Iron routing has a special variable named `Routing` that allows you to configure the application.
+
+It is important to make sure that the application has loaded it's data before rendering the templates. Iron routing provides the `waitOn` configuration. Here is where the client subscriptions go.
+
+Another important aspect of routing is defining the URL path. You are able to pass in parameters through the path. Through the data property on the routing configuration allows you to specify which data is passed to the template. It also makes it easy to specify what happens when a path doesn't match to resource within your application.
+
