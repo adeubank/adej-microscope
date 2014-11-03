@@ -79,3 +79,26 @@ mup deploy
 ## Templates
 
 Meteor uses Spacebars to handle templating. Spacebars is HTML with some additions. The additions allow the including partials, expressions and block helpers.
+
+Helpers give templates the power to give templates logic and massage data into the view correctly. A helper is created by adding a new key to meteors special variable named `Template`.  Every named template is added to the `Template` variable. Then when adding a helper to a named template value, it makes that custom helper available to the HTML file.
+
+## Colllections
+
+A special data structure that is permanently stored on the server side in the database. It is synchronized with each user's browser.
+
+```JavaScript
+Posts = new Mongo.Collection('posts'); // Creating a Mongo collection 
+```
+
+Meteor synchronizes data across users by using browser memory, browser's local storage, and the database.
+
+Meteor uses the `autopublish` package to sync the whole database with each connected client. It is not meant for production environments. To publish `Posts` so that they are available requires using the `publish/subscribe` which takes the collection name.
+
+## Publications and Subscriptions
+
+In meteor, publishing makes records in the database available to the client. This is how you lock down your application. You only publish what you want the client to see. Parameterized publications allow the client to retrieve subsets of the database which allows for scalability.
+
+The `Autopublish` takes care of publishing and subscribing by automatically including all the data on the server on the client.
+
+## Routing
+
