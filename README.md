@@ -108,3 +108,8 @@ It is important to make sure that the application has loaded it's data before re
 
 Another important aspect of routing is defining the URL path. You are able to pass in parameters through the path. Through the data property on the routing configuration allows you to specify which data is passed to the template. It also makes it easy to specify what happens when a path doesn't match to resource within your application.
 
+## Session
+
+Meteor has a special variable on the client named, `Session`. This variable is reactive meaning when it changes it automatically causes the templates to update and show the changes.
+
+Most of the code provided by Meteor is reactive. Which means that when data changes the view is updated to reflect those changes. For the regular JavaScript code that isn't part of Meteor we have `Tracker.autorun`. Functions that are executed under autorun are set to run every time any reactive data sources are updated inside the functions scope.
