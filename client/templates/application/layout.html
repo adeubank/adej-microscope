@@ -1,11 +1,8 @@
 <template name="layout">
     <div class="container">
-        <header class="navbar navbar-default" role="navigation">
-            <div class="navbar-header"><a href="{{pathFor 'postsList'}}" class="navbar-brand">{{pageTitle}}</a>
-            </div>
-        </header>
+        {{> header}}
         <div class="row-fluid" id="main">
-            {{> yield }}
+            {{> yield}}
         </div>
     </div>
 </template>

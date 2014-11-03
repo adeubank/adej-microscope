@@ -115,3 +115,5 @@ Meteor has a special variable on the client named, `Session`. This variable is r
 Most of the code provided by Meteor is reactive. Which means that when data changes the view is updated to reflect those changes. For the regular JavaScript code that isn't part of Meteor we have `Tracker.autorun`. Functions that are executed under autorun are set to run every time any reactive data sources are updated inside the functions scope.
 
 ## Adding Users
+
+Users are easily added with the 
