@@ -1,5 +1,5 @@
 Template.layout.helpers({
     pageTitle: function () {
-        return Session.get('pageTitle');
+        return Session.get('pageTitle') || 'Adej Microscope';
     }
 });
