@@ -122,3 +122,10 @@ Users are easily added with the `ui-account` package and `account-password`.
 
 Meteor has data sources that fire callbacks when they are changed. Meteor calls this reactivity. It accomplishes this with `computations`. We could manually accomplish this by binding an `observe` function on top of a data source. Then we could do the heavy lifting of what happens on certain callbacks.
 
+## Creating Posts
+
+Meteor uses JavaScript to create models. There is no need to send any POST data to the server. Meteor takes care of everything else. When developing production applications remember to remove the `insecure` package.
+
+The `allow` method is what determines if a model can be created or not.
+
+A Meteor `method` is a function that runs on the server and is able to be called on the client. It is useful for model validations. You use Meteor `method` and use `call` to execute a named method.

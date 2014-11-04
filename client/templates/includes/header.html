@@ -11,6 +11,16 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{{pathFor 'postsList'}}" class="navbar-brand">{{pageTitle}}</a>
+                    </li>
+                    <li>
+                        {{#if currentUser}}
+                            <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+                        {{/if}}
+                    </li>
+                </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{> loginButtons}}
                 </ul>
