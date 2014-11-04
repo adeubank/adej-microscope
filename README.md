@@ -116,4 +116,9 @@ Most of the code provided by Meteor is reactive. Which means that when data chan
 
 ## Adding Users
 
-Users are easily added with the 
+Users are easily added with the `ui-account` package and `account-password`.
+
+## Reactivity
+
+Meteor has data sources that fire callbacks when they are changed. Meteor calls this reactivity. It accomplishes this with `computations`. We could manually accomplish this by binding an `observe` function on top of a data source. Then we could do the heavy lifting of what happens on certain callbacks.
+
