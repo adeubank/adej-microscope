@@ -137,3 +137,6 @@ Meteor allows for checking if a new record matches certain criteria. It uses a M
 ## Latency Compensation
 
 Meteor handles events differently than other frameworks. When a user submits a form it is handled by the client and the server. This way the client is able to simulate the response from the server and update its UI. When the server does finally return it updates the UI to accurately reflect the response.
+
+
+## Editing posts
