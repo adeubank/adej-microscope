@@ -129,3 +129,11 @@ Meteor uses JavaScript to create models. There is no need to send any POST data 
 The `allow` method is what determines if a model can be created or not.
 
 A Meteor `method` is a function that runs on the server and is able to be called on the client. It is useful for model validations. You use Meteor `method` and use `call` to execute a named method.
+
+### Security Checks
+
+Meteor allows for checking if a new record matches certain criteria. It uses a Meteor `method` combined with `audit-argument-checks` to validate that the models attributes match property types.
+
+## Latency Compensation
+
+Meteor handles events differently than other frameworks. When a user submits a form it is handled by the client and the server. This way the client is able to simulate the response from the server and update its UI. When the server does finally return it updates the UI to accurately reflect the response.
