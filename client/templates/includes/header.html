@@ -1,30 +1,33 @@
 <template name="header">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <a href="{{pathFor 'postsList'}}" class="navbar-brand">Adej Microscope</a>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navigation">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="{{pathFor 'postsList'}}" class="navbar-brand">{{pageTitle}}</a>
-                    </li>
-                    <li>
-                        {{#if currentUser}}
-                            <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
-                        {{/if}}
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {{> loginButtons}}
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <a href="{{pathFor 'postsList'}}" class="navbar-brand">Adej Microscope</a>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="{{pathFor 'postsList'}}" class="navbar-brand">{{pageTitle}}</a>
+          </li>
+            {{#if currentUser}}
+              <li>
+                <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+              </li>
+              <li class="dropdown">
+                {{> notifications}}
+              </li>
+            {{/if}}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
