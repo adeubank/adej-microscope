@@ -1,5 +1,13 @@
-Meteor.publish('posts', function() {
-  return Posts.find();
+Meteor.publish('posts', function(sort, limit) {
+  return Posts.find({}, {
+    sort: sort,
+    limit: Math.min(limit, 25) // enforce a max limit of 25
+  });
+});
+
+Meteor.publish('singlePost', function (id) {
+  check(id, String);
+  return Posts.find(id);
 });
 
 Meteor.publish('comments', function (postId) {
