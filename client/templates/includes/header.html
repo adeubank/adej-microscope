@@ -7,13 +7,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <a href="{{pathFor 'postsList'}}" class="navbar-brand">Adej Microscope</a>
+          <a href="{{pathFor 'home'}}" class="navbar-brand">Adej Microscope</a>
         </button>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           <li>
-            <a href="{{pathFor 'postsList'}}" class="navbar-brand">{{pageTitle}}</a>
+            <a href="{{pathFor 'newPosts'}}" class="navbar-brand">New</a>
+          </li>
+          <li>
+            <a href="{{pathFor 'bestPosts'}}" class="navbar-brand">Best</a>
           </li>
             {{#if currentUser}}
               <li>
