@@ -14,7 +14,7 @@ Template.postItem.helpers({
     if (userId && !_.include(this.upvoters, userId)) {
       return 'btn-primary upvotable';
     } else {
-      return 'disabled';
+      return 'btn-primary downvotable';
     }
   }
 });
@@ -23,5 +23,10 @@ Template.postItem.events({
   'click .upvotable': function (e) {
     e.preventDefault();
     Meteor.call('upvote', this._id);
+  },
+
+  'click .downvotable': function (e) {
+    e.preventDefault();
+    Meteor.call('downvote', this._id);
   }
 });
